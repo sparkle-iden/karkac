@@ -23,11 +23,18 @@ namespace karkac
         public ServicePage()
         {
             InitializeComponent();
+            //добавляем строки
+            // загрузить в список из бд
+            var currentServices = Lopatkin_Model.GetContext().Service.ToList();
+            // связать с нашим листвью
+            ServiceListView.ItemsSource = currentServices;
+            //добавили строки
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new AddEditPage());
         }
     }
+    
+
 }

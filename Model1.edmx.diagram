@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="adda7156eaff47e0a54b36e5f699e018" Name="Diagram1">
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.Client" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.ClientService" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.DocumentByService" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.Gender" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.Manufacturer" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.Product" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.ProductPhoto" Width="1.5" PointX="7.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.ProductSale" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.Service" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.ServicePhoto" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.Tag" Width="1.5" PointX="6" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LopatkinAvtoServiceModel.TagOfClient" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_Client_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_Client2_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_ClientService_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_ClientService_Client1" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_TagOfClient_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_TagOfClient_Client2" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_DocumentByService_Service2" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_ProductSale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.FK_TagOfClient_Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="LopatkinAvtoServiceModel.AttachedProduct" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
