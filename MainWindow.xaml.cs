@@ -44,5 +44,6 @@ namespace karkac
                 BtnBack.Visibility = Visibility.Hidden;
             }
         }
+
     }
 }

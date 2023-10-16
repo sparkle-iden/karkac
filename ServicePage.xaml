@@ -6,9 +6,11 @@
       xmlns:local="clr-namespace:karkac"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ServicePage">
+      Title="ServicePage" IsVisibleChanged="Page_IsVisibleChanged"
+    >
 
     <Grid>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
@@ -19,10 +21,12 @@
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Text="Введите название для поиска " TextAlignment="Right"
                            Width="300" FontSize="20"></TextBlock>
-            <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
+
+                <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
          Width="300" FontSize="15"></TextBox>
-        </StackPanel>
-          
+
+            </StackPanel>
+
             <StackPanel Orientation="Horizontal" Margin="10">
                 <TextBlock Text=" Выберите название для поиска " TextAlignment="Right"
                            Width="300" FontSize="20"></TextBlock>
@@ -47,6 +51,10 @@
                          Width="300" FontSize="20" Name="RButtonDown" 
                          Checked="RButtonDown_Checked"></RadioButton>
         </StackPanel>
+
+        <Button Content="Добавить" Name="AddButton" Click="AddButton_Click"  HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
+
+        
         <ListView Name="ServiceListView" Margin="10,10,-10,-10" Grid.Row="2">
             <ListView.ItemTemplate>
                
@@ -70,7 +78,7 @@
                         <TextBlock Text="{Binding Discount, StringFormat=*скидка {0} % }" Opacity="{Binding Discount}" Margin="5" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
 
                         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
-                            <Button x:Name="EditButton" Content="редактировать" Margin="2"/>
+                            <Button x:Name="EditButton" Content="редактировать" Margin="2" Click="EditButton_Click_1"/>
                             <Button x:Name="DeleteButton" Content="удалить" Margin="2"/>
                         </StackPanel>
                         <Grid.ColumnDefinitions>
