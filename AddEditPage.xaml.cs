@@ -41,7 +41,7 @@ namespace karkac
             if (_currentServise.Cost == 0)
                 errors.AppendLine("Укажите стоимость услуги");
             //дискаунт у студентов числом может быть, тогда защита как у cost if
-            if (_currentServise.Discount == 0)
+            if (_currentServise.Discount == null)
                 errors.AppendLine("Укажите скидку");
             if (string.IsNullOrWhiteSpace(_currentServise.Duration))
                 errors.AppendLine("Укажите длительность услуги");

@@ -15,6 +15,7 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
         
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -26,7 +27,9 @@
          Width="300" FontSize="15"></TextBox>
 
             </StackPanel>
-
+            
+        
+            
             <StackPanel Orientation="Horizontal" Margin="10">
                 <TextBlock Text=" Выберите название для поиска " TextAlignment="Right"
                            Width="300" FontSize="20"></TextBlock>
@@ -60,12 +63,12 @@
                
                 <DataTemplate>
                     <Grid>
-                        <Image Width="100" Grid.Column="0" Stretch="UniformToFill" HorizontalAlignment="Center">
+                        <Image Width="200" Grid.Column="0" Grid.RowSpan="4" Stretch="UniformToFill" HorizontalAlignment="Center">
                             <Image.Source>
                                 <Binding Path="MainImagePath">
                                     <Binding.TargetNullValue>
                                         <ImageSource>
-                                            Properties/service_logo.png
+                                            Resource/picture.png
                                         </ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>
@@ -79,7 +82,7 @@
 
                         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                             <Button x:Name="EditButton" Content="редактировать" Margin="2" Click="EditButton_Click_1"/>
-                            <Button x:Name="DeleteButton" Content="удалить" Margin="2"/>
+                            <Button x:Name="DeleteButton" Content="удалить" Margin="2" Click="DeleteButton_Click"/>
                         </StackPanel>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
@@ -95,7 +98,22 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-      
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="LeftDirButton" Content="&lt;" Width="20" Height="25"
+                        Click="LeftDirButton_Click"></Button>
+            <ListBox FontSize="20" Name="PageListBox" MouseUp="PageListBox_MouseUp">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+            <Button Name="RightDirButton" Content="&gt;" Width="20" Height="25"
+                        Click="RightDirButton_Click"></Button>
+            <TextBlock x:Name="TBCount" FontSize="20" Height="20"></TextBlock>
+            <TextBlock x:Name="TBAllRecords" FontSize="20" Height="20"></TextBlock>
+        </StackPanel>
     </Grid>
 
 </Page>
