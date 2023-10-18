@@ -17,15 +17,15 @@ namespace karkac
     
     public partial class Lopatkin_Model : DbContext
     {
-        //добавлено
         private static Lopatkin_Model _context;
         public static Lopatkin_Model GetContext()
         {
             if (_context == null)
+            {
                 _context = new Lopatkin_Model();
+            }
             return _context;
         }
-       
         public Lopatkin_Model()
             : base("name=Lopatkin_Model")
         {
